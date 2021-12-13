@@ -28,3 +28,17 @@ Desde la barra de navegación podemos acceder al apartado de usuarios
 Y si hacemos click al icono flotante de abajo, podremos añadir un usuario al cual le tenemos que añadir un nombre obligatoriamente
 #
 ![image](https://user-images.githubusercontent.com/72435753/145870403-118dc39d-53f0-4f23-ad0a-470c23874363.png)
+
+
+Y por supuesto podemos editar tanto el nombre como los detalles de cada usuario con el icono del lápiz
+y borrar al usuario con el icono del cubo de la basura.
+#
+![image](https://user-images.githubusercontent.com/72435753/145871459-e38b0541-5eac-4797-86e8-97c71e1b72c5.png)
+
+
+Haciendo click en alguno de los usuarios nos lleva a otra pantalla en donde podemos visualizar su información
+y añadir mediante un botón los animales favoritos que le queramos asignar a dicho usuario desde otra pantalla similar a la principal.
+#
+![image](https://user-images.githubusercontent.com/72435753/145871650-5f1de8d9-82d5-410e-a93d-50747d77f129.png)
+
+![image](https://user-images.githubusercontent.com/72435753/145871841-3cab99e3-152d-4302-a42a-e6e06b8c213a.png)
