@@ -15,14 +15,17 @@ export class UserPage implements OnInit {
 
   constructor(private router: Router, private userService: UserService) {}
 
-  async ngOnInit() {
+  async ngOnInit() {}
+
+  // Use this method instead of 'ngOnInit' to make sure data gets updated after navigation
+  async ionViewWillEnter() {
     const users = await this.userService.getUsersFromStorage()
 
     if (users.length === 0) this.users = await this.userService.loadDefaultUsersFromJSON()
     else this.users = users
   }
 
-  async goToAddUser() {
+  goToAddUser() {
     this.router.navigateByUrl('/add-user')
   }
 
@@ -30,7 +33,7 @@ export class UserPage implements OnInit {
     this.router.navigateByUrl(`/user/${id}`)
   }
 
-  async editUser(id: number) {
+  editUser(id: number) {
     this.router.navigateByUrl(`/edit-user/${id}`)
   }
 

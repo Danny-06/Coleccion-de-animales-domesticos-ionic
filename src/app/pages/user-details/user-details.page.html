@@ -1,9 +1,20 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>user-details</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+    <div id="user-container">
+        <div class="user-card">
+            <div class="user-name">
+                <img class="user-icon" src="assets/user-icon.png" alt="user-icon">
+                {{ user.name }}
+            </div>
+            <div class="user-details">{{ user.details }}</div>
+        </div>
+        <div class="animals-count">
+            <div class="cats">{{ animalIcons.cat }}:        {{ getUserAnimalCount().cats }}</div>
+            <div class="dogs">{{ animalIcons.dog }}:        {{ getUserAnimalCount().dogs }}</div>
+            <div class="parrots">{{ animalIcons.parrot }}:  {{ getUserAnimalCount().parrots }}</div>
+        </div>
+    
+        <ion-button id="add-animal-btn" color="dark" fill="solid" (click)="goToAddFavoriteAnimal(user.id)">
+            Add Favorite Animals
+        </ion-button>
+    </div>    
 </ion-content>

@@ -9,11 +9,11 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./edit-user.page.scss'],
   encapsulation: ViewEncapsulation.ShadowDom
 })
-export class EditUserPage implements OnInit {
+export class EditUserPage {
 
   user: User = {id: 0, name: '', details: '', favoriteAnimals: []}
 
-  constructor(private userService: UserService, private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(private userService: UserService, private router: Router, private activatedRoute: ActivatedRoute) {}
 
   async ngOnInit() {
     const id = this.activatedRoute.snapshot.paramMap.get('id')

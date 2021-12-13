@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
 import { AnimalService } from './../../services/animal/animal.service';
 import { Animal } from './../../classes/animal/animal';
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-main',
@@ -10,6 +10,24 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.ShadowDom
 })
 export class MainPage implements OnInit {
+
+   // Drowpdown filter
+   filterOptions: {name: string}[] = [
+    {name: 'all'},
+    {name: 'cat'},
+    {name: 'dog'},
+    {name: 'parrot'}
+  ]
+
+  @Input()
+  filterSelected: string = this.filterOptions[0].name
+
+  filterAnimals(): any {
+    const type = this.filterSelected
+    if (type === 'all') return this.animals = this.animalService.getAnimals()
+
+    this.animals = this.animalService.getAnimals().filter(animal => animal.type === type)
+  }
 
   constructor(private animalService: AnimalService, private router: Router) {}
 
