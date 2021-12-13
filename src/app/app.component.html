@@ -1,3 +1,11 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+    <ion-header>
+        <ion-toolbar>
+            <nav id="navbar">
+                <div class="nav-item" (click)="goTo('main')">Home</div>
+                <div class="nav-item" (click)="goTo('user')">Users</div>
+            </nav>
+        </ion-toolbar>
+    </ion-header>
+    <ion-router-outlet></ion-router-outlet>
 </ion-app>

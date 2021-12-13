@@ -1,0 +1,25 @@
+<ion-content>
+    <div id="user-list" *ngIf="users.length; else usersEmpty">
+        <div class="user-li" *ngFor="let user of users">
+            <div class="header" (click)="goToUser(user.id)">
+                <img class="user-icon" src="assets/user-icon.png" alt="user picture">
+                <div class="user-name">{{ user.name }}</div>
+            </div>
+            <div class="body">
+                <ion-icon class="edit" name="pencil-outline" (click)="editUser(user.id)"></ion-icon>
+                <ion-icon class="delete" name="trash-outline" (click)="deleteUser(user.id)"></ion-icon>
+            </div>
+        </div>
+    </div>
+    
+    <ng-template #usersEmpty>
+        <div id="no-users">
+            <div>There's no users yet.</div>
+            <div>Create a new user and select his favorite animals</div>
+        </div>
+    </ng-template>
+    
+    <div class="overlay">
+        <div class="btn-add-user" (click)="goToAddUser()">+</div>
+    </div>
+</ion-content>

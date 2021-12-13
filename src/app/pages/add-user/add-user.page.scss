@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+ion-content {
+  --background: #1b1228;
+}
+
+::part(scroll) {
+  padding: 1rem;
+}
+
+#user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#user-name, #user-details {
+  --background: #332650;
+}
+
+#add-user-btn {
+  background-color: #402862;
+}
